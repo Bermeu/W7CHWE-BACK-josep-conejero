@@ -1,4 +1,4 @@
-const debug = require("debug")("resdocial:database");
+const debug = require("debug")("redsocial:database");
 const mongoose = require("mongoose");
 
 const connectToDataBase = (connectionString) =>
