@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+/* const debug = require("debug")("redsocial:usersController"); */
 const bcrypt = require("bcrypt");
 const jsonwebtoken = require("jsonwebtoken");
 const User = require("../../database/models/User");
