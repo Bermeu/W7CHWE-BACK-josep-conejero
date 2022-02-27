@@ -12,6 +12,8 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(helmet());
 
+app.use("/users", usersRouter);
+
 /* app.use("/users", usersRouter);
 app.use("/series", verifyToken, seriesRouter);
 

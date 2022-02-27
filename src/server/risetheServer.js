@@ -1,7 +1,7 @@
 require("dotenv").config();
 const debug = require("debug")("redsocial:server");
 
-const risetheServer = (port, app) =>
+const riseTheServer = (port, app) =>
   new Promise((resolve, reject) => {
     const server = app.listen(port, () => {
       debug(`We are running on port http://localhost:${port}`);
@@ -14,4 +14,4 @@ const risetheServer = (port, app) =>
     });
   });
 
-module.exports = risetheServer;
+module.exports = riseTheServer;
