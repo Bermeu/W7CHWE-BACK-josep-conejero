@@ -1,7 +1,10 @@
 require("dotenv").config();
 const express = require("express");
-const { login, registerUser } = require("../controllers/usersController");
-const getAllUsers = require("../controllers/usersControllers");
+const {
+  login,
+  registerUser,
+  getAllUsers,
+} = require("../controllers/usersController");
 
 const router = express.Router();
 

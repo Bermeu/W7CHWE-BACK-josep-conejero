@@ -5,6 +5,11 @@ const jsonwebtoken = require("jsonwebtoken");
 const User = require("../../database/models/User");
 const encryptPassword = require("../utils/encryptPassword");
 
+const getAllUsers = async (req, res) => {
+  const users = await User.find();
+  res.json({ users });
+};
+
 const login = async (req, res, next) => {
   const { username, password } = req.body;
   const user = await User.findOne({ username });
@@ -49,4 +54,4 @@ const registerUser = async (req, res, next) => {
   }
 };
 
-module.exports = { login, registerUser };
+module.exports = { login, registerUser, getAllUsers };
