@@ -1,7 +1,7 @@
 require("dotenv").config();
 const debug = require("debug")("redsocial:root");
-/* const connectToDataBase = require("./db/index");
-const app = require("./server/index");
+const connectToDataBase = require("./database/index");
+/* const app = require("./server/index");
 const risetheServer = require("./server/riseTheServer"); */
 
 const port = process.env.PORT || 4000;
