@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 const helmet = require("helmet");
+const cors = require("cors");
 const usersRouter = require("./routers/usersRouter");
 const { notFoundError, generalError } = require("./middlewares/errors");
 const verifyToken = require("./middlewares/verifyToken");
@@ -9,6 +10,7 @@ const verifyToken = require("./middlewares/verifyToken");
 
 const app = express();
 app.use(morgan("dev"));
+app.use(cors());
 app.use(express.json());
 app.use(helmet());
 
